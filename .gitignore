@@ -1,1 +1,23 @@
 node_modules
+# Local machine and generated files
+.DS_Store
+.idea/
+.vscode/
+*.xcuserstate
+xcuserdata/
+DerivedData/
+.build/
+node_modules/
+dist/
+build/
+
+# Local environment and signing material
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.aab
+*.apk
+*.ipa
+*.xcarchive/

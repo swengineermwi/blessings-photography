@@ -2,12 +2,631 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Blessings Photography — Fine Art & Editorial Studio</title>
+  <meta name="description" content="Blessings Photography is an award-winning fine art, wedding, and editorial photography studio crafting timeless visual stories with emotive light and couture elegance.">
+  <meta name="theme-color" content="#0d0d0f">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
-  <h1 class="intro">Let's Make it Happen!</h1>
+<body class="dark-theme">
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span>✨ Booking Open for 2026/2027 International Destination Weddings & Editorial Commissions</span>
+    <button class="announcement-close" id="closeAnnouncement" aria-label="Close Announcement">&times;</button>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="main-header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-title">BLESSINGS</span>
+        <span class="logo-subtitle">PHOTOGRAPHY</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#gallery" class="nav-link">Portfolio</a>
+        <a href="#grading" class="nav-link">Artistry</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#pricing" class="nav-link">Investment</a>
+        <a href="#testimonials" class="nav-link">Stories</a>
+        <a href="#contact" class="nav-link btn-nav-cta">Book a Session</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" title="Toggle Light/Dark Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-wrapper">
+      <div class="hero-bg-slide active" style="background-image: url('./assets/hero.jpg');"></div>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-award"></i> International Fine Art Photographer of the Year
+      </div>
+      <h1 class="hero-title">Capturing Eternal Moments in Pure Light &amp; Emotion</h1>
+      <p class="hero-subtitle">Editorial portraits, luxury weddings, and architectural photography crafted with timeless elegance, deep narrative, and cinematic vision.</p>
+      
+      <div class="hero-buttons">
+        <a href="#gallery" class="btn btn-primary">
+          <span>Explore Portfolio</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>Check Availability</span>
+        </a>
+      </div>
+
+      <!-- Hero Quick Stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="12">12+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="450">450+</span>
+          <span class="stat-label">Weddings &amp; Shoots</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="18">18</span>
+          <span class="stat-label">Vogue &amp; Harper Features</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <a href="#gallery" aria-label="Scroll Down">
+        <span class="mouse">
+          <span class="wheel"></span>
+        </span>
+        <span class="scroll-text">Scroll to discover</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tagline">Selected Portfolio</span>
+        <h2 class="section-title">A Symphony of Light &amp; Shadow</h2>
+        <p class="section-description">Browse curated collections across editorial portraiture, intimate luxury weddings, architectural design, and raw wilderness.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Works</button>
+        <button class="filter-btn" data-filter="portrait">Portraits</button>
+        <button class="filter-btn" data-filter="wedding">Weddings</button>
+        <button class="filter-btn" data-filter="architecture">Architecture</button>
+        <button class="filter-btn" data-filter="nature">Nature &amp; Fine Art</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <div class="gallery-item" data-category="portrait">
+          <div class="gallery-card">
+            <img src="./assets/hero.jpg" alt="Editorial Fashion Portrait" loading="lazy">
+            <div class="card-overlay">
+              <div class="card-category">Editorial Portrait</div>
+              <h3 class="card-title">Aura of Sunset</h3>
+              <p class="card-location"><i class="fa-solid fa-location-dot"></i> Amalfi Coast, Italy</p>
+              <button class="card-expand-btn" aria-label="Expand image">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="wedding">
+          <div class="gallery-card">
+            <img src="./assets/wedding.jpg" alt="Luxury Tuscan Wedding Couple" loading="lazy">
+            <div class="card-overlay">
+              <div class="card-category">Weddings</div>
+              <h3 class="card-title">Whispers in Tuscan Olive Groves</h3>
+              <p class="card-location"><i class="fa-solid fa-location-dot"></i> Florence, Italy</p>
+              <button class="card-expand-btn" aria-label="Expand image">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="architecture">
+          <div class="gallery-card">
+            <img src="./assets/architecture.jpg" alt="Modernist Villa Architecture" loading="lazy">
+            <div class="card-overlay">
+              <div class="card-category">Architecture</div>
+              <h3 class="card-title">Symmetry &amp; Twilight</h3>
+              <p class="card-location"><i class="fa-solid fa-location-dot"></i> Zurich, Switzerland</p>
+              <button class="card-expand-btn" aria-label="Expand image">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="nature">
+          <div class="gallery-card">
+            <img src="./assets/nature.jpg" alt="Misty Alpine Fjord at Dawn" loading="lazy">
+            <div class="card-overlay">
+              <div class="card-category">Nature &amp; Fine Art</div>
+              <h3 class="card-title">The Silent Dawn Fjord</h3>
+              <p class="card-location"><i class="fa-solid fa-location-dot"></i> Lofoten Islands, Norway</p>
+              <button class="card-expand-btn" aria-label="Expand image">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="portrait">
+          <div class="gallery-card">
+            <img src="./assets/bio.jpg" alt="Candid Studio Portrait" loading="lazy">
+            <div class="card-overlay">
+              <div class="card-category">Portraits</div>
+              <h3 class="card-title">The Artist in Motion</h3>
+              <p class="card-location"><i class="fa-solid fa-location-dot"></i> Paris Studio, France</p>
+              <button class="card-expand-btn" aria-label="Expand image">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="wedding">
+          <div class="gallery-card">
+            <img src="./assets/hero.jpg" alt="Couture Bride Details" loading="lazy">
+            <div class="card-overlay">
+              <div class="card-category">Weddings</div>
+              <h3 class="card-title">Veil of Golden Sunlight</h3>
+              <p class="card-location"><i class="fa-solid fa-location-dot"></i> Lake Como, Italy</p>
+              <button class="card-expand-btn" aria-label="Expand image">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Before & After Editing Mastery Section -->
+  <section class="section grading-section" id="grading">
+    <div class="container">
+      <div class="grading-layout">
+        <div class="grading-info">
+          <span class="section-tagline">Mastery of Craft</span>
+          <h2 class="section-title">From RAW Canvas to Fine-Art Masterpiece</h2>
+          <p class="section-description">Our signature aesthetic combines cinematic color science, soft skin luminosity, and custom tonal grading designed to evoke nostalgic emotion while maintaining crisp editorial fidelity.</p>
+
+          <div class="grading-features">
+            <div class="grading-feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <div>
+                <h4>Bespoke Tonal Profiles</h4>
+                <p>Every frame is individually color balanced without heavy batch filters.</p>
+              </div>
+            </div>
+            <div class="grading-feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-sun"></i></div>
+              <div>
+                <h4>Luminous Highlight Recovery</h4>
+                <p>Preserving ethereal rim light and natural skin texture seamlessly.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Comparison Slider -->
+        <div class="comparison-container" id="comparisonSlider">
+          <div class="comparison-img img-after" style="background-image: url('./assets/hero.jpg');">
+            <span class="comparison-label label-after">Edited Masterwork</span>
+          </div>
+          <div class="comparison-img img-before" id="imgBefore" style="background-image: url('./assets/hero.jpg'); filter: contrast(0.85) saturate(0.5) brightness(0.9) sepia(0.2);">
+            <span class="comparison-label label-before">Unprocessed RAW</span>
+          </div>
+          <div class="comparison-handle" id="sliderHandle">
+            <div class="handle-line"></div>
+            <div class="handle-circle">
+              <i class="fa-solid fa-chevron-left"></i>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="handle-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Photographer Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper">
+          <div class="about-img-frame">
+            <img src="./assets/bio.jpg" alt="Elena Blessings - Master Photographer" class="about-img">
+            <div class="about-badge">
+              <span class="signature-font">Elena Blessings</span>
+              <span class="badge-role">Founder &amp; Principal Artist</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-tagline">Behind The Lens</span>
+          <h2 class="section-title">"I don't just take pictures. I preserve feelings that outlive time."</h2>
+          <p class="about-bio">For over a decade, Elena Blessings has traveled across Europe, Asia, and the Americas capturing raw human intimacy, couture fashion editorials, and architectural grandeur.</p>
+          <p class="about-bio">Trained in traditional medium format film and digital cinematography, her philosophy centers on creating organic atmosphere, allowing subjects to breathe naturally while capturing the subtle glances and unscripted magic.</p>
+
+          <!-- Gear & Philosophy Tabs -->
+          <div class="tabs-wrapper">
+            <div class="tab-buttons">
+              <button class="tab-btn active" data-tab="philosophy">Philosophy</button>
+              <button class="tab-btn" data-tab="gear">Medium &amp; Gear</button>
+              <button class="tab-btn" data-tab="awards">Recognition</button>
+            </div>
+            <div class="tab-contents">
+              <div class="tab-content active" id="philosophy">
+                <p>We treat every assignment not as a photo shoot, but as an immersive editorial publication. Soft organic light, timeless color palettes, and unobtrusive storytelling.</p>
+              </div>
+              <div class="tab-content" id="gear">
+                <ul>
+                  <li><i class="fa-solid fa-camera-retro"></i> <strong>Cameras:</strong> Leica SL2, Hasselblad H6D-100c, Sony A1</li>
+                  <li><i class="fa-solid fa-eye"></i> <strong>Lenses:</strong> Noctilux 50mm f/0.95, Otus 85mm f/1.4 Prime Optics</li>
+                  <li><i class="fa-solid fa-film"></i> <strong>Film:</strong> Kodak Portra 400 &amp; Fuji Pro 400H 120mm</li>
+                </ul>
+              </div>
+              <div class="tab-content" id="awards">
+                <ul>
+                  <li><i class="fa-solid fa-trophy"></i> <strong>2025 International Photography Awards:</strong> Gold Winner</li>
+                  <li><i class="fa-solid fa-newspaper"></i> <strong>Featured In:</strong> Vogue Weddings, Harper's Bazaar, Architectural Digest</li>
+                  <li><i class="fa-solid fa-ribbon"></i> <strong>Fearless Photographers:</strong> Top 10 World Masters</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Investment / Pricing Calculator Section -->
+  <section class="section pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tagline">Tailored Experience</span>
+        <h2 class="section-title">Investment Packages &amp; Customizer</h2>
+        <p class="section-description">Select a base package below or customize your bespoke coverage with live pricing estimation.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Package 1 -->
+        <div class="pricing-card">
+          <div class="card-badge">Portraits</div>
+          <h3 class="package-name">Essential Atelier</h3>
+          <div class="package-price"><span class="currency">$</span><span class="price-val">1,250</span></div>
+          <p class="package-desc">Ideal for personal branding, fine-art portraiture, or anniversary sessions.</p>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> 2 Hours Studio or Location Shoot</li>
+            <li><i class="fa-solid fa-check"></i> 35 Fully Hand-Retouched High-Res Images</li>
+            <li><i class="fa-solid fa-check"></i> Online Private Gallery + Print Rights</li>
+            <li><i class="fa-solid fa-check"></i> Wardrobe &amp; Styling Guidance</li>
+          </ul>
+          <button class="btn btn-outline select-package-btn" data-package="Essential Atelier" data-base="1250">Select Package</button>
+        </div>
+
+        <!-- Package 2 - Featured -->
+        <div class="pricing-card featured">
+          <div class="popular-ribbon">Most Popular</div>
+          <div class="card-badge">Weddings &amp; Galas</div>
+          <h3 class="package-name">Couture Celebration</h3>
+          <div class="package-price"><span class="currency">$</span><span class="price-val">4,800</span></div>
+          <p class="package-desc">Comprehensive luxury coverage for weddings, elopements, and multi-day events.</p>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> 8 Hours Full Event Coverage</li>
+            <li><i class="fa-solid fa-check"></i> 500+ Hand-Curated Color-Graded Files</li>
+            <li><i class="fa-solid fa-check"></i> Second Associate Master Photographer</li>
+            <li><i class="fa-solid fa-check"></i> Complimentary Engagement Session</li>
+            <li><i class="fa-solid fa-check"></i> Deluxe Italian Leather Fine-Art Album</li>
+          </ul>
+          <button class="btn btn-primary select-package-btn" data-package="Couture Celebration" data-base="4800">Select Package</button>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="pricing-card">
+          <div class="card-badge">Commercial</div>
+          <h3 class="package-name">Editorial &amp; Brands</h3>
+          <div class="package-price"><span class="currency">$</span><span class="price-val">3,200</span></div>
+          <p class="package-desc">Bespoke imagery for architectural firms, fashion houses, and luxury hospitality.</p>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> Full Day Commercial Shoot</li>
+            <li><i class="fa-solid fa-check"></i> Full Commercial Licensing Rights</li>
+            <li><i class="fa-solid fa-check"></i> On-Site Digital Tech &amp; Monitor Setup</li>
+            <li><i class="fa-solid fa-check"></i> 48-Hour Rapid Preview Delivery</li>
+          </ul>
+          <button class="btn btn-outline select-package-btn" data-package="Editorial & Brands" data-base="3200">Select Package</button>
+        </div>
+      </div>
+
+      <!-- Live Customizer Box -->
+      <div class="customizer-box">
+        <h3 class="customizer-title"><i class="fa-solid fa-sliders"></i> Interactive Coverage Customizer</h3>
+        <p>Tailor options below to estimate total investment:</p>
+        
+        <div class="customizer-options">
+          <label class="custom-option">
+            <input type="checkbox" class="addon-checkbox" data-price="600">
+            <span class="checkbox-custom"></span>
+            <span class="option-label">Aerial Drone Cinematic Photography (+$600)</span>
+          </label>
+          <label class="custom-option">
+            <input type="checkbox" class="addon-checkbox" data-price="800">
+            <span class="checkbox-custom"></span>
+            <span class="option-label">Handcrafted 30-Page Linen Album (+$800)</span>
+          </label>
+          <label class="custom-option">
+            <input type="checkbox" class="addon-checkbox" data-price="450">
+            <span class="checkbox-custom"></span>
+            <span class="option-label">Express 7-Day Rush Editing (+$450)</span>
+          </label>
+          <label class="custom-option">
+            <input type="checkbox" class="addon-checkbox" data-price="500">
+            <span class="checkbox-custom"></span>
+            <span class="option-label">Super-8 Vintage Film Highlight Reel (+$500)</span>
+          </label>
+        </div>
+
+        <div class="customizer-footer">
+          <div class="total-display">
+            <span>Estimated Investment:</span>
+            <span class="total-amount" id="calculatedTotal">$4,800</span>
+          </div>
+          <button class="btn btn-primary" id="openCustomizerBooking">Inquire With Custom Package</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials Slider -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tagline">Client Praise</span>
+        <h2 class="section-title">Words From Those We’ve Documented</h2>
+      </div>
+
+      <div class="testimonial-slider" id="testimonialSlider">
+        <div class="testimonial-track">
+          <div class="testimonial-card active">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote">"Elena captured our Lake Como wedding with an artist's soul. Looking through our album feels like reliving a film. Her gentle guidance made us feel completely natural."</p>
+            <div class="client-info">
+              <h4 class="client-name">Sophia &amp; Julian Vance</h4>
+              <span class="client-meta">Wedding in Bellagio, Italy</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote">"As an architectural firm, we demand exact lighting and geometric perfection. Blessings Photography brought out the soul of our Zurich villa project like no other."</p>
+            <div class="client-info">
+              <h4 class="client-name">Marcus Thorne</h4>
+              <span class="client-meta">Principal, Atelier Nord Architecture</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote">"The portrait session exceeded every expectation. Elena knows how to make light dance around a person. My branding photos have brought endless compliments!"</p>
+            <div class="client-info">
+              <h4 class="client-name">Camille Laurent</h4>
+              <span class="client-meta">Fashion Creative Director, Paris</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-arrow prev" id="prevTestimonial" aria-label="Previous Testimonial"><i class="fa-solid fa-arrow-left"></i></button>
+          <div class="slider-dots" id="sliderDots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+          <button class="slider-arrow next" id="nextTestimonial" aria-label="Next Testimonial"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Booking Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info-col">
+          <span class="section-tagline">Let's Connect</span>
+          <h2 class="section-title">Reserve Your Date &amp; Create Magic Together</h2>
+          <p>Dates are reserved on a first-come basis. Commissions are limited to 20 luxury weddings per year to ensure meticulous artistic attention.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span class="detail-label">Email Enquiries</span>
+                <a href="mailto:atelier@blessingsphotography.com" class="detail-val">atelier@blessingsphotography.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <span class="detail-label">Direct Studio Line</span>
+                <a href="tel:+18005550199" class="detail-val">+1 (800) 555-0199</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <span class="detail-label">Studio Atelier</span>
+                <span class="detail-val">742 Rue de Rivoli, Paris &amp; New York City</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#" class="social-icon" aria-label="Vimeo"><i class="fa-brands fa-vimeo-v"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-col">
+          <form class="booking-form" id="bookingForm">
+            <h3 class="form-title">Inquiry &amp; Availability Form</h3>
+
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" class="form-input" placeholder="e.g. Victoria &amp; Alexander" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" class="form-input" placeholder="name@domain.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp</label>
+                <input type="tel" id="phone" class="form-input" placeholder="+1 (555) 000-0000">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="serviceType">Service Type *</label>
+                <select id="serviceType" class="form-input" required>
+                  <option value="" disabled selected>Select Commission Type</option>
+                  <option value="Wedding & Elopement">Wedding &amp; Elopement</option>
+                  <option value="Editorial Portrait">Editorial Portrait</option>
+                  <option value="Architectural Photography">Architectural &amp; Commercial</option>
+                  <option value="Fine Art & Private Project">Fine Art &amp; Private Project</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="eventDate">Target Event Date</label>
+                <input type="date" id="eventDate" class="form-input">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="location">Location / Venue</label>
+              <input type="text" id="location" class="form-input" placeholder="e.g. Villa d'Este, Lake Como">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell Us About Your Vision *</label>
+              <textarea id="message" class="form-input" rows="4" placeholder="Share event details, guest count, aesthetic preferences..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="submitFormBtn">
+              <span>Send Atelier Inquiry</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous Image"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="Next Image"><i class="fa-solid fa-chevron-right"></i></button>
+    
+    <div class="lightbox-content">
+      <img src="" alt="Enlarged View" id="lightboxImg">
+      <div class="lightbox-caption">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxMeta"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-title">BLESSINGS</span>
+          <span class="logo-subtitle">PHOTOGRAPHY</span>
+          <p>Preserving timeless emotion through light, couture artistry, and fine art storytelling.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Navigation</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#gallery">Portfolio Gallery</a></li>
+            <li><a href="#grading">Artistic Process</a></li>
+            <li><a href="#about">About Elena</a></li>
+            <li><a href="#pricing">Investment</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Atelier Dispatch</h4>
+          <p>Subscribe for exclusive travel schedules, print release dates, and photography journal notes.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Blessings Photography. All Rights Reserved. Crafted with fine art precision.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Commission</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
